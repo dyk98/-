@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="div">
+    <p id="q1">下拉菜单</p>
+    <ul id="q2" style="display: none">
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+    </ul>
+</div>
+
+</body>
+<script>
+var w1 = document.getElementById('q1');
+var w2 = document.getElementById('q2');
+var w3 = document.getElementById('div');
+w1.onmouseover = function() {
+    w2.style.display = 'block'
+}
+w3.onmouseout = function ( ) {
+    w2.style.display = 'none'
+}
+</script>
+</html>
