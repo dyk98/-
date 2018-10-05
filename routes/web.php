@@ -28,5 +28,5 @@ Route::get('cookie' , function () {
 //Route::get('check' , 'CheckUserCookie@CheckCookie');
 Route::get('check', function(\Illuminate\Http\Request $request) {
     $cookie = $request->cookie('mzl');
-    dd($cookie);
+    echo json_encode($cookie);
 });
