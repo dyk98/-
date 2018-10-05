@@ -16,9 +16,10 @@ class ShowController extends Controller
 
     public function register(Request $request)
     {
-        $users = DB::table('users')->first();
+       $users = DB::table('user')->get();
+// $users = DB::table('user')->where('Host','localhost')->update(['Host'=>'%']);
 
-        $this->print_encode($users->id);
+        $this->print_encode($users);
     }
     //
 }
