@@ -6,6 +6,9 @@ use Illuminate\Http\Request;
 
 class UserCookie extends Controller
 {
+    function print_encode($qqq) {
+        echo json_encode($qqq);
+    }
     //
     public function RegisterCookie (Request $request) {
         $value = response('Hello Cookie')->cookie('mzl','mzlsb','3600');
