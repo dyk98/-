@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-
+use Symfony\Component\HttpFoundation\Cookie;
 class CheckUserCookie extends Controller
 {
     function print_encode($qqq) {
@@ -11,7 +11,7 @@ class CheckUserCookie extends Controller
     }
     //
     public function CheckCookie (Request $request) {
-        $values = $request->cookie('mzl');
+        $values = $request->cookie();
         $this->print_encode($values);
     }
 }
