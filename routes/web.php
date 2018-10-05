@@ -19,5 +19,14 @@ Route::get('/qqq', function () {
 });
 Route::get('user/{id}', 'LoginController@register');
 Route::get('/qwer', 'ShowController@register');
-Route::get('/cookie' , 'UserCookie@RegisterCookie');
-Route::get('/check' , 'CheckUserCookie@CheckCookie');
+//Route::get('/cookie' , 'UserCookie@RegisterCookie');
+Route::get('cookie' , function () {
+    return response('Hello Lol')->cookie(
+        'mzl', 'mzlsb', 3600
+    );
+});
+//Route::get('check' , 'CheckUserCookie@CheckCookie');
+Route::get('check', function(\Illuminate\Http\Request $request) {
+    $cookie = $request->cookie('mzl');
+    dd($cookie);
+});
