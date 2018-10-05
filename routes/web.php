@@ -22,7 +22,7 @@ Route::get('/qwer', 'ShowController@register');
 //Route::get('/cookie' , 'UserCookie@RegisterCookie');
 Route::get('cookie' , function () {
     return response('Hello Lol')->cookie(
-        'mzl', 'mzlsb', 3600
+        'mzl', 'mzlsb', 10
     );
 });
 //Route::get('check' , 'CheckUserCookie@CheckCookie');

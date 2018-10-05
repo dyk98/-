@@ -12,7 +12,7 @@ class UserCookie extends Controller
     //
     public function RegisterCookie (Request $request) {
         return response('Hello Lol')->cookie(
-            'mzl', 'mzlsb', 3600
+            'mzl', 'mzlsb', 10
         );
     }
 }
