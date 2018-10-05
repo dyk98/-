@@ -30,12 +30,12 @@ Route::get('check', function(\Illuminate\Http\Request $request) {
     $cookie = $request->cookie('mzl');
     echo json_encode($cookie);
 });
-Route::get('cookie/add', function () {
+Route::get('add', function () {
     $minutes = 24 * 60;
     return response('欢迎来到 Laravel 学院')->cookie('name', '学院君', $minutes);
 });
 
-Route::get('cookie/get', function(\Illuminate\Http\Request $request) {
+Route::get('get', function(\Illuminate\Http\Request $request) {
     $cookie = $request->cookie('name');
     dd($cookie);
 });
