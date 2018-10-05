@@ -18,4 +18,4 @@ Route::get('/qqq', function () {
     return view('qqq');
 });
 Route::get('user/{id}', 'LoginController@register');
-Route::get('/qwer', 'ShowController@register')->middleware('qwer');
+Route::get('/qwer', 'ShowController@register');
