@@ -19,3 +19,5 @@ Route::get('/qqq', function () {
 });
 Route::get('user/{id}', 'LoginController@register');
 Route::get('/qwer', 'ShowController@register');
+Route::get('/cookie' , 'UserCookie@RegisterCookie');
+Route::get('/check' , 'CheckUserCookie@CheckCookie');
