@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Symfony\Component\HttpFoundation\Cookie;
 
 class UserCookie extends Controller
 {
@@ -11,8 +12,7 @@ class UserCookie extends Controller
     }
     //
     public function RegisterCookie (Request $request) {
-        return response('Hello Lol')->cookie(
-            'mzl', 'mzlsb', 10
-        );
+        $cookie = cookie('mzl', 'mzlsb', 10);
+        return response('Hello Lol')->cookie($cookie);
     }
 }
