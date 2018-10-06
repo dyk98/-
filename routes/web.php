@@ -17,6 +17,14 @@ Route::get('/', function () {
 Route::get('/qqq', function () {
     return view('qqq');
 });
-Route::get('user/{id}', 'LoginController@register');
+Route::get('user/register', 'LoginController@register');
+Route::get('user/login', 'LoginController@login');
 Route::get('/qwer', 'ShowController@register');
-Route::get('/try', 'TryController@tryinput');
+Route::get('/check/cookie', 'CheckController@checkcookie');
+Route::get('/user/exit', 'ExitController@exitlogin');
+Route::get('/add/likecircle', 'AddController@addcircle');
+Route::get('/add/liketeam', 'AddController@addteam');
+Route::get('/remove/liketeam', 'RemoveController@removeteam');
+Route::get('/remove/likecircle', 'RemoveController@removeteam');
+
+
